@@ -18,10 +18,6 @@ for iter = 1:num_iters
     hypothesis = X * theta;
     temp1 = sum((hypothesis - y) .* X(:, 1));
     temp2 = sum((hypothesis - y) .* X(:, 2));
-    %temp3 = sum(temp1) * (1 / m);
-    %temp4 = sum(temp2) * (1 / m);
-    %temp5 = theta(1) - alpha * temp3;
-    %temp6 = theta(2) - alpha * temp4;
     theta(1) = theta(1) - alpha / m * temp1;
     theta(2) = theta(2) - alpha / m * temp2;
 
